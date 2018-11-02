@@ -1,0 +1,14 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "sourceMap": true,
+        "allowJs": true,
+        "strict": true,
+        "removeComments": false,
+        "allowUnreachableCode": false,
+        "strictNullChecks": true,
+        "outFile": "server.js"
+    }
+}

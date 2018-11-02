@@ -1,0 +1,15 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "Friend matching app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Wes Kruger",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
