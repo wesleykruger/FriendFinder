@@ -2,3 +2,4 @@ node.d.ts
 server.ts
 node_modules
 gitignore.txt
+tsconfig.json

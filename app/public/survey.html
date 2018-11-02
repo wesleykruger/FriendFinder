@@ -234,31 +234,21 @@
         }
 
         $.get("/api/friends", function (data) {
-          console.log("length to work with: " + data.length);
-          console.log("full data: " + data);
           for (i = 0; i < data.length; i++) {
             let diffSum = 0;
-            console.log("diffsum start: " + diffSum);
-            console.log("difftoBeat sum: " + diffToBeat.diff);
-            console.log("frienddata: " + friendData.scores)
-            console.log("we are on this: " + data[i] + " data entry")
             for (j = 0; j < friendData.scores.length - 1; j++) {
-              console.log("instance of frienddata: " + friendData.scores[j])
               if (friendData.scores[j] != data[i].scores[j]) {
                 diffSum += Math.abs(friendData.scores[j] - data[i].scores[j])
               }
             }
-            console.log("diffsum end" + diffSum);
             if (diffSum < diffToBeat.diff) {
               diffToBeat.diff = diffSum;
               diffToBeat.name = data[i].name;
               diffToBeat.photo = data[i].photo;
             }
           }
-          console.log("diff to beat: " + diffToBeat.name + " " +  diffToBeat.photo);
             // Grab the result from the AJAX post so that the best match's name and photo are displayed.
             $("#match-name").text(diffToBeat.name);
-            console.log("photo src: " + diffToBeat.photo);
             $("#match-img").attr("src", diffToBeat.photo);
 
             // Show the modal with the best match
